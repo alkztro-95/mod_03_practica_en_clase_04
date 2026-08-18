@@ -17,7 +17,8 @@ SELECT
   *,
   _metadata.file_name as file_name,
   _metadata.file_modification_time as file_modification_time,
-  current_timestamp() as load_date
+  current_timestamp() as load_date,
+  current_timestamp() as another_load_date
 FROM read_files(
   '{raw_data_path}/',
   format => 'csv',
