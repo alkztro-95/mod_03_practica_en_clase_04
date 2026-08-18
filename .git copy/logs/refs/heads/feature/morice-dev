@@ -1,7 +1,0 @@
-0000000000000000000000000000000000000000 f87e2fdc0eb2dea87613912f5115454667047fd5 moricejuan <jg.moricem@gmail.com> 1786997451 -0600	branch: Created from HEAD
-f87e2fdc0eb2dea87613912f5115454667047fd5 4d34828645f33961ba262e96689c44c26438ccb6 moricejuan <jg.moricem@gmail.com> 1786997605 -0600	commit: comment added
-4d34828645f33961ba262e96689c44c26438ccb6 d3f18507371182d85e715fe3ffe1dbc42d88b698 moricejuan <jg.moricem@gmail.com> 1786999214 -0600	commit: tercer cambio, verificando CI/CD
-d3f18507371182d85e715fe3ffe1dbc42d88b698 8c461172ffc9df1346964db49f6633ccac283080 moricejuan <jg.moricem@gmail.com> 1787000240 -0600	commit: retrigger CI con secrets nuevos
-8c461172ffc9df1346964db49f6633ccac283080 6d80001930739cfa409fb04f927a2b1b01c89dc6 moricejuan <jg.moricem@gmail.com> 1787001032 -0600	commit: retrigger CI tras corregir GRANT
-6d80001930739cfa409fb04f927a2b1b01c89dc6 ba47d156bc686b2627ee36f4ae64a1b223416f0e moricejuan <jg.moricem@gmail.com> 1787008675 -0600	commit: fix: restore load_date column in bronze
-ba47d156bc686b2627ee36f4ae64a1b223416f0e 825ff926861505fb425f74fa918d836ec0d9cc0d moricejuan <jg.moricem@gmail.com> 1787009503 -0600	commit: fix: header => true (was accidentally set to false)
