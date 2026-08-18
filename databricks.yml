@@ -1,0 +1,38 @@
+###########################################################################################
+# 09 - Deploy a DAB to Multiple Environments (nyctaxi, Free Edition, local CLI, manual catalogs)
+###########################################################################################
+
+bundle:
+  name: demo09_lab_bundle
+
+include:
+  - "./resources/lab09_nyc.job.yml"
+
+variables:
+  catalog_dev:
+    description: Development catalog for the project.
+    default: dab_lab_dev     # <-- must match the catalog you created earlier (see SETUP.sql)
+
+  catalog_prod:
+    description: Production catalog for the project.
+    default: dab_lab_prod    # <-- must match the catalog you created earlier (see SETUP.sql)
+
+  catalog_name:
+    description: Catalog used by the job for the current target. Overridden per-target below.
+    default: ${var.catalog_dev}
+
+targets:
+
+  dev:
+    mode: development
+    default: true
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    # catalog_name stays at its default (catalog_dev) for this target.
+
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog_name: ${var.catalog_prod}
